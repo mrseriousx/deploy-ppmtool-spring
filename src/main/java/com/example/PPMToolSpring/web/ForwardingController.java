@@ -9,6 +9,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public class ForwardingController {
     @RequestMapping("/<any end point name>/{path:[^\\.]+}/**")
     public String forward(HttpServletRequest httpServletRequest) {
-        return "forward:/";
+        return "forward:/index.html";
     }
 }
