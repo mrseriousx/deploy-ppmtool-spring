@@ -44,9 +44,12 @@ public class ProjectController {
 		
 		
 		
-		
+		//System.out.println("----------");
+
 		ResponseEntity<? > errorMap = mapValidationErrorService.MapValidationService(result);
 		if(errorMap!=null )return errorMap;
+		
+		//System.out.println("++++++"+project.toString());
 		
 		projectService.saveOrUpdateProject(project, principal.getName());
 		return new ResponseEntity<Project>(project, HttpStatus.CREATED ); 
